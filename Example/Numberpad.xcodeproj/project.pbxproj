@@ -1,0 +1,332 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		19A0EA5E16511287001B196E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19A0EA5D16511287001B196E /* UIKit.framework */; };
+		19A0EA6016511287001B196E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19A0EA5F16511287001B196E /* Foundation.framework */; };
+		19A0EA6216511287001B196E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19A0EA6116511287001B196E /* CoreGraphics.framework */; };
+		19A0EAA516519312001B196E /* Numberpad.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A0EAA316519312001B196E /* Numberpad.m */; };
+		19A0EAA616519312001B196E /* Numberpad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19A0EAA416519312001B196E /* Numberpad.xib */; };
+		19A0EAB31651951A001B196E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 19A0EAAF1651951A001B196E /* InfoPlist.strings */; };
+		19A0EAB41651951A001B196E /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19A0EAB11651951A001B196E /* ViewController.xib */; };
+		19A0EAB71651961A001B196E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A0EAB61651961A001B196E /* main.m */; };
+		19A0EAB916519661001B196E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A0EAB816519661001B196E /* ViewController.m */; };
+		19A0EABB1651967C001B196E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A0EABA1651967C001B196E /* AppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		19A0EA5916511287001B196E /* Numberpad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Numberpad.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		19A0EA5D16511287001B196E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		19A0EA5F16511287001B196E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		19A0EA6116511287001B196E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		19A0EA6516511287001B196E /* Numberpad-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Numberpad-Info.plist"; sourceTree = "<group>"; };
+		19A0EA6B16511287001B196E /* Numberpad-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Numberpad-Prefix.pch"; sourceTree = "<group>"; };
+		19A0EA6C16511287001B196E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		19A0EA6F16511287001B196E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		19A0EA7316511287001B196E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		19A0EA91165185F1001B196E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		19A0EAA016519252001B196E /* COPYING */ = {isa = PBXFileReference; lastKnownFileType = text; name = COPYING; path = ../COPYING; sourceTree = "<group>"; };
+		19A0EAA116519252001B196E /* COPYING.LESSER */ = {isa = PBXFileReference; lastKnownFileType = text; name = COPYING.LESSER; path = ../COPYING.LESSER; sourceTree = "<group>"; };
+		19A0EAA216519312001B196E /* Numberpad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Numberpad.h; path = ../Numberpad/Numberpad.h; sourceTree = "<group>"; };
+		19A0EAA316519312001B196E /* Numberpad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Numberpad.m; path = ../Numberpad/Numberpad.m; sourceTree = "<group>"; };
+		19A0EAA416519312001B196E /* Numberpad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Numberpad.xib; path = ../Numberpad/Numberpad.xib; sourceTree = "<group>"; };
+		19A0EAB01651951A001B196E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
+		19A0EAB21651951A001B196E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = ViewController.xib; sourceTree = "<group>"; };
+		19A0EAB61651961A001B196E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = SOURCE_ROOT; };
+		19A0EAB816519661001B196E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = SOURCE_ROOT; };
+		19A0EABA1651967C001B196E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		19A0EA5616511287001B196E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19A0EA5E16511287001B196E /* UIKit.framework in Frameworks */,
+				19A0EA6016511287001B196E /* Foundation.framework in Frameworks */,
+				19A0EA6216511287001B196E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19A0EA4E16511287001B196E = {
+			isa = PBXGroup;
+			children = (
+				19A0EAA016519252001B196E /* COPYING */,
+				19A0EAA116519252001B196E /* COPYING.LESSER */,
+				19A0EA91165185F1001B196E /* README.md */,
+				19A0EAA71651931B001B196E /* Numberpad */,
+				19A0EA6316511287001B196E /* Example */,
+				19A0EA5C16511287001B196E /* Frameworks */,
+				19A0EA5A16511287001B196E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		19A0EA5A16511287001B196E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				19A0EA5916511287001B196E /* Numberpad.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		19A0EA5C16511287001B196E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				19A0EA5D16511287001B196E /* UIKit.framework */,
+				19A0EA5F16511287001B196E /* Foundation.framework */,
+				19A0EA6116511287001B196E /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		19A0EA6316511287001B196E /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				19A0EA6C16511287001B196E /* AppDelegate.h */,
+				19A0EABA1651967C001B196E /* AppDelegate.m */,
+				19A0EA6F16511287001B196E /* ViewController.h */,
+				19A0EAB816519661001B196E /* ViewController.m */,
+				19A0EA7216511287001B196E /* ViewController.xib */,
+				19A0EA6416511287001B196E /* Supporting Files */,
+			);
+			name = Example;
+			path = Numberpad;
+			sourceTree = "<group>";
+		};
+		19A0EA6416511287001B196E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				19A0EA6516511287001B196E /* Numberpad-Info.plist */,
+				19A0EAAE1651951A001B196E /* en.lproj */,
+				19A0EAB61651961A001B196E /* main.m */,
+				19A0EA6B16511287001B196E /* Numberpad-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		19A0EAA71651931B001B196E /* Numberpad */ = {
+			isa = PBXGroup;
+			children = (
+				19A0EAA216519312001B196E /* Numberpad.h */,
+				19A0EAA316519312001B196E /* Numberpad.m */,
+				19A0EAA416519312001B196E /* Numberpad.xib */,
+			);
+			name = Numberpad;
+			sourceTree = "<group>";
+		};
+		19A0EAAE1651951A001B196E /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				19A0EAAF1651951A001B196E /* InfoPlist.strings */,
+				19A0EAB11651951A001B196E /* ViewController.xib */,
+			);
+			path = en.lproj;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		19A0EA5816511287001B196E /* Numberpad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19A0EA7716511287001B196E /* Build configuration list for PBXNativeTarget "Numberpad" */;
+			buildPhases = (
+				19A0EA5516511287001B196E /* Sources */,
+				19A0EA5616511287001B196E /* Frameworks */,
+				19A0EA5716511287001B196E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Numberpad;
+			productName = Numberpad;
+			productReference = 19A0EA5916511287001B196E /* Numberpad.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		19A0EA5016511287001B196E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Louis Nafziger";
+			};
+			buildConfigurationList = 19A0EA5316511287001B196E /* Build configuration list for PBXProject "Numberpad" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 19A0EA4E16511287001B196E;
+			productRefGroup = 19A0EA5A16511287001B196E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				19A0EA5816511287001B196E /* Numberpad */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		19A0EA5716511287001B196E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19A0EAA616519312001B196E /* Numberpad.xib in Resources */,
+				19A0EAB31651951A001B196E /* InfoPlist.strings in Resources */,
+				19A0EAB41651951A001B196E /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		19A0EA5516511287001B196E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19A0EAA516519312001B196E /* Numberpad.m in Sources */,
+				19A0EAB71651961A001B196E /* main.m in Sources */,
+				19A0EAB916519661001B196E /* ViewController.m in Sources */,
+				19A0EABB1651967C001B196E /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		19A0EA7216511287001B196E /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19A0EA7316511287001B196E /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+		19A0EAAF1651951A001B196E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19A0EAB01651951A001B196E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		19A0EAB11651951A001B196E /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19A0EAB21651951A001B196E /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		19A0EA7516511287001B196E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		19A0EA7616511287001B196E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		19A0EA7816511287001B196E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Numberpad-Prefix.pch";
+				INFOPLIST_FILE = "Numberpad-Info.plist";
+				PRODUCT_NAME = Numberpad;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		19A0EA7916511287001B196E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Numberpad-Prefix.pch";
+				INFOPLIST_FILE = "Numberpad-Info.plist";
+				PRODUCT_NAME = Numberpad;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		19A0EA5316511287001B196E /* Build configuration list for PBXProject "Numberpad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19A0EA7516511287001B196E /* Debug */,
+				19A0EA7616511287001B196E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19A0EA7716511287001B196E /* Build configuration list for PBXNativeTarget "Numberpad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19A0EA7816511287001B196E /* Debug */,
+				19A0EA7916511287001B196E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 19A0EA5016511287001B196E /* Project object */;
+}
