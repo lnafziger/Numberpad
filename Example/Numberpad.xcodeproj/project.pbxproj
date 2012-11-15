@@ -40,6 +40,7 @@
 		19A0EAB61651961A001B196E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = SOURCE_ROOT; };
 		19A0EAB816519661001B196E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = SOURCE_ROOT; };
 		19A0EABA1651967C001B196E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		19EE517F1655306C00F85851 /* CHANGELOG */ = {isa = PBXFileReference; lastKnownFileType = text; path = CHANGELOG; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +63,7 @@
 				19A0EAA016519252001B196E /* COPYING */,
 				19A0EAA116519252001B196E /* COPYING.LESSER */,
 				19A0EA91165185F1001B196E /* README.md */,
+				19EE517F1655306C00F85851 /* CHANGELOG */,
 				19A0EAA71651931B001B196E /* Numberpad */,
 				19A0EA6316511287001B196E /* Example */,
 				19A0EA5C16511287001B196E /* Frameworks */,

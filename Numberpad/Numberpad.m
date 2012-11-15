@@ -1,5 +1,5 @@
 /******************************************************************************
- * v. 0.9    12 NOV 2012
+ * v. 0.9.1  15 NOV 2012
  * Filename  Numberpad.m
  * Project:  NumberPad
  * Purpose:  Class to display a custom numberpad on an iPad and properly handle
@@ -32,7 +32,7 @@
 
 @interface Numberpad ()
 
-@property (nonatomic, weak) id<UITextInput> target;
+@property (nonatomic, weak) id<UITextInput> targetTextInput;
 
 @end
 
@@ -40,12 +40,11 @@
 
 @implementation Numberpad
 
-@synthesize target;
+@synthesize targetTextInput;
 
 #pragma mark - Singleton method
 
-+ (Numberpad *)defaultNumberpad
-{
++ (Numberpad *)defaultNumberpad {
     static Numberpad *defaultNumberpad = nil;
     static dispatch_once_t onceToken;
     
@@ -57,44 +56,42 @@
 
 #pragma mark - view lifecycle
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     
     // Keep track of the textView/Field that we are editing
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(editingDidBegin:) 
+                                             selector:@selector(editingDidBegin:)
                                                  name:UITextFieldTextDidBeginEditingNotification
                                                object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(editingDidBegin:) 
+                                             selector:@selector(editingDidBegin:)
                                                  name:UITextViewTextDidBeginEditingNotification
                                                object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(editingDidEnd:) 
+                                             selector:@selector(editingDidEnd:)
                                                  name:UITextFieldTextDidEndEditingNotification
                                                object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(editingDidEnd:) 
+                                             selector:@selector(editingDidEnd:)
                                                  name:UITextViewTextDidEndEditingNotification
                                                object:nil];
 }
 
-- (void)viewDidUnload
-{
-    [[NSNotificationCenter defaultCenter] removeObserver:self 
-                                                    name:UITextFieldTextDidBeginEditingNotification 
+- (void)viewDidUnload {
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UITextFieldTextDidBeginEditingNotification
                                                   object:nil];
-    [[NSNotificationCenter defaultCenter] removeObserver:self 
-                                                    name:UITextViewTextDidBeginEditingNotification 
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UITextViewTextDidBeginEditingNotification
                                                   object:nil];
-    [[NSNotificationCenter defaultCenter] removeObserver:self 
-                                                    name:UITextFieldTextDidEndEditingNotification 
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UITextFieldTextDidEndEditingNotification
                                                   object:nil];
-    [[NSNotificationCenter defaultCenter] removeObserver:self 
-                                                    name:UITextViewTextDidEndEditingNotification 
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UITextViewTextDidEndEditingNotification
                                                   object:nil];
-    self.target = nil;
+    self.targetTextInput = nil;
     
     [super viewDidUnload];
 }
@@ -104,23 +101,23 @@
 // Editing just began, store a reference to the object that just became the firstResponder
 - (void)editingDidBegin:(NSNotification *)notification {
     if (![notification.object conformsToProtocol:@protocol(UITextInput)]) {
-        self.target = nil;
+        self.targetTextInput = nil;
         return;
-    } 
+    }
     
-    self.target = notification.object;
+    self.targetTextInput = notification.object;
 }
 
 // Editing just ended.
 - (void)editingDidEnd:(NSNotification *)notification {
-    self.target = nil;
+    self.targetTextInput = nil;
 }
 
 #pragma mark - Keypad IBAction's
 
 // A number (0-9) was just pressed on the number pad
 - (IBAction)numberpadNumberPressed:(UIButton *)sender {
-    if (self.target == nil) {
+    if (self.targetTextInput == nil) {
         return;
     }
     
@@ -129,27 +126,27 @@
         return;
     }
     
-    UITextRange *selectedTextRange = self.target.selectedTextRange;
+    UITextRange *selectedTextRange = self.targetTextInput.selectedTextRange;
     if (selectedTextRange == nil) {
         return;
     }
     
-    [self replaceTextOfTextInput:self.target inTextRange:selectedTextRange withString:numberPressed];
+    [self textInput:self.targetTextInput replaceTextAtTextRange:selectedTextRange withString:numberPressed];
 }
 
 // The delete button was just pressed on the number pad
 - (IBAction)numberpadDeletePressed:(UIButton *)sender {
-    if (self.target == nil) {
+    if (self.targetTextInput == nil) {
         return;
     }
     
-    UITextRange *selectedTextRange = self.target.selectedTextRange;
+    UITextRange *selectedTextRange = self.targetTextInput.selectedTextRange;
     if (selectedTextRange == nil) {
         return;
     }
     
     // Calculate the selected text to delete
-    UITextPosition  *startPosition  = [self.target positionFromPosition:selectedTextRange.start offset:-1];
+    UITextPosition  *startPosition  = [self.targetTextInput positionFromPosition:selectedTextRange.start offset:-1];
     if (startPosition == nil) {
         return;
     }
@@ -157,41 +154,41 @@
     if (endPosition == nil) {
         return;
     }
-    UITextRange     *rangeToDelete  = [self.target textRangeFromPosition:startPosition
-                                                              toPosition:endPosition];
+    UITextRange     *rangeToDelete  = [self.targetTextInput textRangeFromPosition:startPosition
+                                                                       toPosition:endPosition];
     
-    [self replaceTextOfTextInput:self.target inTextRange:rangeToDelete withString:@""];
+    [self textInput:self.targetTextInput replaceTextAtTextRange:rangeToDelete withString:@""];
 }
 
 // The clear button was just pressed on the number pad
 - (IBAction)numberpadClearPressed:(UIButton *)sender {
-    if (self.target == nil) {
+    if (self.targetTextInput == nil) {
         return;
     }
     
-    UITextRange *allTextRange = [self.target textRangeFromPosition:self.target.beginningOfDocument
-                                                        toPosition:self.target.endOfDocument];
+    UITextRange *allTextRange = [self.targetTextInput textRangeFromPosition:self.targetTextInput.beginningOfDocument
+                                                                 toPosition:self.targetTextInput.endOfDocument];
     
-    [self replaceTextOfTextInput:self.target inTextRange:allTextRange withString:@""];
+    [self textInput:self.targetTextInput replaceTextAtTextRange:allTextRange withString:@""];
 }
 
 // The done button was just pressed on the number pad
 - (IBAction)numberpadDonePressed:(UIButton *)sender {
-    if (self.target == nil) {
+    if (self.targetTextInput == nil) {
         return;
     }
-
+    
     // Call the delegate methods and resign the first responder if appropriate
-    if ([self.target isKindOfClass:[UITextView class]]) {
-        UITextView *textView = (UITextView *)self.target;
+    if ([self.targetTextInput isKindOfClass:[UITextView class]]) {
+        UITextView *textView = (UITextView *)self.targetTextInput;
         if ([textView.delegate respondsToSelector:@selector(textViewShouldEndEditing:)]) {
             if ([textView.delegate textViewShouldEndEditing:textView])
             {
                 [textView resignFirstResponder];
             }
         }
-    } else if ([self.target isKindOfClass:[UITextField class]]) {
-        UITextField *textField = (UITextField *)self.target;
+    } else if ([self.targetTextInput isKindOfClass:[UITextField class]]) {
+        UITextField *textField = (UITextField *)self.targetTextInput;
         if ([textField.delegate respondsToSelector:@selector(textFieldShouldEndEditing:)]) {
             if ([textField.delegate textFieldShouldEndEditing:textField])
             {
@@ -199,15 +196,37 @@
             }
         }
     }
-    
 }
 
-#pragma mark - replaceText
+#pragma mark - text replacement routines
+
+// Check delegate methods to see if we should change the characters in range
+- (BOOL)textInput:(id <UITextInput>)textInput shouldChangeCharactersInRange:(NSRange)range withString:(NSString *)string
+{
+    if ([textInput isKindOfClass:[UITextField class]]) {
+        UITextField *textField = (UITextField *)textInput;
+        if ([textField.delegate respondsToSelector:@selector(textField:shouldChangeCharactersInRange:replacementString:)]) {
+            if (![textField.delegate textField:textField
+                 shouldChangeCharactersInRange:range
+                             replacementString:string]) {
+                return NO;
+            }
+        }
+    } else if ([textInput isKindOfClass:[UITextView class]]) {
+        UITextView *textView = (UITextView *)textInput;
+        if ([textView.delegate respondsToSelector:@selector(textView:shouldChangeTextInRange:replacementText:)]) {
+            if (![textView.delegate textView:textView
+                     shouldChangeTextInRange:range
+                             replacementText:string]) {
+                return NO;
+            }
+        }
+    }
+    return YES;
+}
 
 // Replace the text of the textInput in textRange with string if the delegate approves
-- (void)replaceTextOfTextInput:(id <UITextInput>)textInput 
-                   inTextRange:(UITextRange *)   textRange 
-                    withString:(NSString *)      string {
+- (void)textInput:(id <UITextInput>)textInput replaceTextAtTextRange:(UITextRange *)textRange withString:(NSString *)string {
     if (textInput == nil) {
         return;
     }
@@ -216,40 +235,16 @@
     }
     
     // Calculate the NSRange for the textInput text in the UITextRange textRange:
-    int startPos                    = [textInput offsetFromPosition:textInput.beginningOfDocument 
+    int startPos                    = [textInput offsetFromPosition:textInput.beginningOfDocument
                                                          toPosition:textRange.start];
     int length                      = [textInput offsetFromPosition:textRange.start
                                                          toPosition:textRange.end];
     NSRange selectedRange           = NSMakeRange(startPos, length);
     
-    // Check our delegate methods to see if we should change the characters in selectedRange
-    if ([textInput isKindOfClass:[UITextField class]]) 
-    {
-        UITextField *textField = (UITextField *)textInput;
-        if ([textField.delegate respondsToSelector:@selector(textField:shouldChangeCharactersInRange:replacementString:)]) 
-        {
-            if (![textField.delegate textField:textField
-                 shouldChangeCharactersInRange:selectedRange
-                             replacementString:string]) 
-            {
-                return;
-            }
-        }
-    } else if ([textInput isKindOfClass:[UITextView class]]) {
-        UITextView *textView = (UITextView *)textInput;
-        if ([textView.delegate respondsToSelector:@selector(textView:shouldChangeTextInRange:replacementText:)]) 
-        {
-            if (![textView.delegate textView:textView 
-                     shouldChangeTextInRange:selectedRange 
-                             replacementText:string]) 
-            {
-                return;
-            }
-        }
+    if ([self textInput:textInput shouldChangeCharactersInRange:selectedRange withString:string]) {
+        // Make the replacement:
+        [textInput replaceRange:textRange withText:string];
     }
-    
-    // Make the replacement:
-    [textInput replaceRange:textRange withText:string];
 }
 
 @end

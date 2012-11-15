@@ -1,7 +1,7 @@
 Numberpad
 =========
 
-iOS Custom Numberpad v0.9.0
+iOS Custom Numberpad v0.9.1
 
 Numberpad is a custom numeric keyboard for the iPad which works with both ```UITextField```'s and ```UITextView```'s requiring no changes other than adding an instance of the ```Numberpad``` class as the ```inputView``` of the text field/view.
 
