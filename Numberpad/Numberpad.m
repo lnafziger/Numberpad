@@ -42,7 +42,7 @@
 
 @synthesize targetTextInput;
 
-#pragma mark - Singleton method
+#pragma mark - Shared Numberpad method
 
 + (Numberpad *)defaultNumberpad {
     static Numberpad *defaultNumberpad = nil;
@@ -51,6 +51,7 @@
     dispatch_once(&onceToken, ^{
         defaultNumberpad = [[Numberpad alloc] init];
     });
+    
     return defaultNumberpad;
 }
 
@@ -116,8 +117,9 @@
 #pragma mark - Keypad IBAction's
 
 // A number (0-9) was just pressed on the number pad
+// Note that this would work just as well with letters or any other character and is not limited to numbers.
 - (IBAction)numberpadNumberPressed:(UIButton *)sender {
-    if (self.targetTextInput == nil) {
+    if (!self.targetTextInput) {
         return;
     }
     
@@ -127,7 +129,7 @@
     }
     
     UITextRange *selectedTextRange = self.targetTextInput.selectedTextRange;
-    if (selectedTextRange == nil) {
+    if (!selectedTextRange) {
         return;
     }
     
@@ -136,22 +138,22 @@
 
 // The delete button was just pressed on the number pad
 - (IBAction)numberpadDeletePressed:(UIButton *)sender {
-    if (self.targetTextInput == nil) {
+    if (!self.targetTextInput) {
         return;
     }
     
     UITextRange *selectedTextRange = self.targetTextInput.selectedTextRange;
-    if (selectedTextRange == nil) {
+    if (!selectedTextRange) {
         return;
     }
     
     // Calculate the selected text to delete
     UITextPosition  *startPosition  = [self.targetTextInput positionFromPosition:selectedTextRange.start offset:-1];
-    if (startPosition == nil) {
+    if (!startPosition) {
         return;
     }
     UITextPosition  *endPosition    = selectedTextRange.end;
-    if (endPosition == nil) {
+    if (!endPosition) {
         return;
     }
     UITextRange     *rangeToDelete  = [self.targetTextInput textRangeFromPosition:startPosition
@@ -162,7 +164,7 @@
 
 // The clear button was just pressed on the number pad
 - (IBAction)numberpadClearPressed:(UIButton *)sender {
-    if (self.targetTextInput == nil) {
+    if (!self.targetTextInput) {
         return;
     }
     
@@ -174,7 +176,7 @@
 
 // The done button was just pressed on the number pad
 - (IBAction)numberpadDonePressed:(UIButton *)sender {
-    if (self.targetTextInput == nil) {
+    if (!self.targetTextInput) {
         return;
     }
     
@@ -182,16 +184,14 @@
     if ([self.targetTextInput isKindOfClass:[UITextView class]]) {
         UITextView *textView = (UITextView *)self.targetTextInput;
         if ([textView.delegate respondsToSelector:@selector(textViewShouldEndEditing:)]) {
-            if ([textView.delegate textViewShouldEndEditing:textView])
-            {
+            if ([textView.delegate textViewShouldEndEditing:textView]) {
                 [textView resignFirstResponder];
             }
         }
     } else if ([self.targetTextInput isKindOfClass:[UITextField class]]) {
         UITextField *textField = (UITextField *)self.targetTextInput;
         if ([textField.delegate respondsToSelector:@selector(textFieldShouldEndEditing:)]) {
-            if ([textField.delegate textFieldShouldEndEditing:textField])
-            {
+            if ([textField.delegate textFieldShouldEndEditing:textField]) {
                 [textField resignFirstResponder];
             }
         }
@@ -203,6 +203,10 @@
 // Check delegate methods to see if we should change the characters in range
 - (BOOL)textInput:(id <UITextInput>)textInput shouldChangeCharactersInRange:(NSRange)range withString:(NSString *)string
 {
+    if (!textInput) {
+        return NO;
+    }
+    
     if ([textInput isKindOfClass:[UITextField class]]) {
         UITextField *textField = (UITextField *)textInput;
         if ([textField.delegate respondsToSelector:@selector(textField:shouldChangeCharactersInRange:replacementString:)]) {
@@ -227,10 +231,10 @@
 
 // Replace the text of the textInput in textRange with string if the delegate approves
 - (void)textInput:(id <UITextInput>)textInput replaceTextAtTextRange:(UITextRange *)textRange withString:(NSString *)string {
-    if (textInput == nil) {
+    if (!textInput) {
         return;
     }
-    if (textRange == nil) {
+    if (!textRange) {
         return;
     }
     
