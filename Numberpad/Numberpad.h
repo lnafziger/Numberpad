@@ -28,7 +28,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Numberpad : UIViewController
+@interface Numberpad : UIView
 
 // The one and only Numberpad instance you should ever need:
 + (Numberpad *)defaultNumberpad;

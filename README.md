@@ -1,11 +1,11 @@
 Numberpad
 =========
 
-iOS Custom Numberpad v0.9.1
+iOS Custom Numberpad v0.9.3
 
 Numberpad is a custom numeric keyboard for the iPad which works with both ```UITextField```'s and ```UITextView```'s requiring no changes other than adding an instance of the ```Numberpad``` class as the ```inputView``` of the text field/view.
 
-This is the first public release, and while I have used it extensively in several projects that are currently in use, please let me know if you have any problems or would like to contribute to this project.
+I have used it extensively in several projects that are currently in use, but please let me know if you have any problems or would like to contribute to this project.
 
 Thank you.
  
@@ -19,10 +19,10 @@ Include the following three files from the Numberpad directory in your project:
 
 In the class where you want to use the numberpad, include the Numberpad.h file.
 
-You must have a reference to the text field/view that you want to use the numberpad with, and then you simply assign the ```Numberpad``` singleton to the view's ```inputView```:
+You must have a reference to the text field/view that you want to use the numberpad with, and then you simply assign the ```Numberpad``` singleton to the view's ```inputView```.  (Note that the following example has changed as of v0.9.3 so that ".view" is no longer allowed/required.):
 
 ``` objective-c
-self.myTextField.inputView  = [Numberpad defaultNumberpad].view;
+self.myTextField.inputView  = [Numberpad defaultNumberpad];
 ```
 
 A complete example project is included in the Example directory.

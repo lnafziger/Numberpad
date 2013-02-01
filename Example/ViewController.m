@@ -38,8 +38,8 @@
 {
     [super viewDidLoad];
 
-    self.myTextField.inputView  = [Numberpad defaultNumberpad].view;
-    self.myTextView.inputView   = [Numberpad defaultNumberpad].view;
+    self.myTextField.inputView  = [Numberpad defaultNumberpad];
+    self.myTextView.inputView   = [Numberpad defaultNumberpad];
 }
 
 - (void)viewDidUnload

@@ -49,7 +49,7 @@
     static dispatch_once_t onceToken;
     
     dispatch_once(&onceToken, ^{
-        defaultNumberpad = [[Numberpad alloc] init];
+        defaultNumberpad = [[[NSBundle mainBundle] loadNibNamed:@"Numberpad" owner:self options:nil] objectAtIndex:0];
     });
     
     return defaultNumberpad;
@@ -57,9 +57,23 @@
 
 #pragma mark - view lifecycle
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
+- (id)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self addObservers];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self addObservers];
+    }
+    return self;
+}
+
+- (void)addObservers {
     // Keep track of the textView/Field that we are editing
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(editingDidBegin:)
@@ -79,7 +93,7 @@
                                                object:nil];
 }
 
-- (void)viewDidUnload {
+- (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self
                                                     name:UITextFieldTextDidBeginEditingNotification
                                                   object:nil];
@@ -93,8 +107,6 @@
                                                     name:UITextViewTextDidEndEditingNotification
                                                   object:nil];
     self.targetTextInput = nil;
-    
-    [super viewDidUnload];
 }
 
 #pragma mark - editingDidBegin/End
