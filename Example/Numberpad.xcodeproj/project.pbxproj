@@ -31,7 +31,6 @@
 		19A0EA7316511287001B196E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		19A0EA91165185F1001B196E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		19A0EAA016519252001B196E /* COPYING */ = {isa = PBXFileReference; lastKnownFileType = text; name = COPYING; path = ../COPYING; sourceTree = "<group>"; };
-		19A0EAA116519252001B196E /* COPYING.LESSER */ = {isa = PBXFileReference; lastKnownFileType = text; name = COPYING.LESSER; path = ../COPYING.LESSER; sourceTree = "<group>"; };
 		19A0EAA216519312001B196E /* Numberpad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Numberpad.h; path = ../Numberpad/Numberpad.h; sourceTree = "<group>"; };
 		19A0EAA316519312001B196E /* Numberpad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Numberpad.m; path = ../Numberpad/Numberpad.m; sourceTree = "<group>"; };
 		19A0EAA416519312001B196E /* Numberpad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Numberpad.xib; path = ../Numberpad/Numberpad.xib; sourceTree = "<group>"; };
@@ -61,7 +60,6 @@
 			isa = PBXGroup;
 			children = (
 				19A0EAA016519252001B196E /* COPYING */,
-				19A0EAA116519252001B196E /* COPYING.LESSER */,
 				19A0EA91165185F1001B196E /* README.md */,
 				19EE517F1655306C00F85851 /* CHANGELOG */,
 				19A0EAA71651931B001B196E /* Numberpad */,
