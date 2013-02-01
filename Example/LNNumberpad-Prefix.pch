@@ -1,11 +1,9 @@
 /******************************************************************************
  * v. 0.9    12 NOV 2012
- * Filename  main.m
+ * Filename  LNNumberpad-Prefix.pch
  * Project:  LNNumberpad
- * Purpose:  Default main.m
+ * Purpose:  Prefix header for all source files of the 'LNNumberpad' target in the 'LNNumberpad' project
  * Author:   Louis Nafziger
- *
- * Copyright 2012 Louis Nafziger
  ******************************************************************************
  *
  * This file is part of LNNumberpad.
@@ -25,13 +23,13 @@
  *
  *****************************************************************************/
 
-#import <UIKit/UIKit.h>
+#import <Availability.h>
 
-#import "AppDelegate.h"
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
 
-int main(int argc, char *argv[])
-{
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
-    }
-}
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif

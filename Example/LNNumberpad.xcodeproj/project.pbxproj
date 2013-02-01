@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19701C6316BC896400AC7479 /* LNNumberpad.m in Sources */ = {isa = PBXBuildFile; fileRef = 19701C6116BC896400AC7479 /* LNNumberpad.m */; };
+		19701C6416BC896400AC7479 /* LNNumberpad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19701C6216BC896400AC7479 /* LNNumberpad.xib */; };
 		19A0EA5E16511287001B196E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19A0EA5D16511287001B196E /* UIKit.framework */; };
 		19A0EA6016511287001B196E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19A0EA5F16511287001B196E /* Foundation.framework */; };
 		19A0EA6216511287001B196E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19A0EA6116511287001B196E /* CoreGraphics.framework */; };
-		19A0EAA516519312001B196E /* Numberpad.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A0EAA316519312001B196E /* Numberpad.m */; };
-		19A0EAA616519312001B196E /* Numberpad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19A0EAA416519312001B196E /* Numberpad.xib */; };
 		19A0EAB31651951A001B196E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 19A0EAAF1651951A001B196E /* InfoPlist.strings */; };
 		19A0EAB41651951A001B196E /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19A0EAB11651951A001B196E /* ViewController.xib */; };
 		19A0EAB71651961A001B196E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A0EAB61651961A001B196E /* main.m */; };
@@ -20,20 +20,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		19A0EA5916511287001B196E /* Numberpad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Numberpad.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		19701C6016BC896400AC7479 /* LNNumberpad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LNNumberpad.h; path = ../LNNumberpad/LNNumberpad.h; sourceTree = "<group>"; };
+		19701C6116BC896400AC7479 /* LNNumberpad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LNNumberpad.m; path = ../LNNumberpad/LNNumberpad.m; sourceTree = "<group>"; };
+		19701C6216BC896400AC7479 /* LNNumberpad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LNNumberpad.xib; path = ../LNNumberpad/LNNumberpad.xib; sourceTree = "<group>"; };
+		19A0EA5916511287001B196E /* LNNumberpad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LNNumberpad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19A0EA5D16511287001B196E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		19A0EA5F16511287001B196E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		19A0EA6116511287001B196E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		19A0EA6516511287001B196E /* Numberpad-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Numberpad-Info.plist"; sourceTree = "<group>"; };
-		19A0EA6B16511287001B196E /* Numberpad-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Numberpad-Prefix.pch"; sourceTree = "<group>"; };
+		19A0EA6516511287001B196E /* LNNumberpad-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "LNNumberpad-Info.plist"; sourceTree = "<group>"; };
+		19A0EA6B16511287001B196E /* LNNumberpad-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LNNumberpad-Prefix.pch"; sourceTree = "<group>"; };
 		19A0EA6C16511287001B196E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		19A0EA6F16511287001B196E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		19A0EA7316511287001B196E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		19A0EA91165185F1001B196E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		19A0EAA016519252001B196E /* COPYING */ = {isa = PBXFileReference; lastKnownFileType = text; name = COPYING; path = ../COPYING; sourceTree = "<group>"; };
-		19A0EAA216519312001B196E /* Numberpad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Numberpad.h; path = ../Numberpad/Numberpad.h; sourceTree = "<group>"; };
-		19A0EAA316519312001B196E /* Numberpad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Numberpad.m; path = ../Numberpad/Numberpad.m; sourceTree = "<group>"; };
-		19A0EAA416519312001B196E /* Numberpad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Numberpad.xib; path = ../Numberpad/Numberpad.xib; sourceTree = "<group>"; };
 		19A0EAB01651951A001B196E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
 		19A0EAB21651951A001B196E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = ViewController.xib; sourceTree = "<group>"; };
 		19A0EAB61651961A001B196E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = SOURCE_ROOT; };
@@ -59,10 +59,10 @@
 		19A0EA4E16511287001B196E = {
 			isa = PBXGroup;
 			children = (
-				19A0EAA016519252001B196E /* COPYING */,
 				19A0EA91165185F1001B196E /* README.md */,
 				19EE517F1655306C00F85851 /* CHANGELOG */,
-				19A0EAA71651931B001B196E /* Numberpad */,
+				19A0EAA016519252001B196E /* COPYING */,
+				19A0EAA71651931B001B196E /* LNNumberpad */,
 				19A0EA6316511287001B196E /* Example */,
 				19A0EA5C16511287001B196E /* Frameworks */,
 				19A0EA5A16511287001B196E /* Products */,
@@ -72,7 +72,7 @@
 		19A0EA5A16511287001B196E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				19A0EA5916511287001B196E /* Numberpad.app */,
+				19A0EA5916511287001B196E /* LNNumberpad.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,22 +104,22 @@
 		19A0EA6416511287001B196E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				19A0EA6516511287001B196E /* Numberpad-Info.plist */,
+				19A0EA6516511287001B196E /* LNNumberpad-Info.plist */,
 				19A0EAAE1651951A001B196E /* en.lproj */,
 				19A0EAB61651961A001B196E /* main.m */,
-				19A0EA6B16511287001B196E /* Numberpad-Prefix.pch */,
+				19A0EA6B16511287001B196E /* LNNumberpad-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		19A0EAA71651931B001B196E /* Numberpad */ = {
+		19A0EAA71651931B001B196E /* LNNumberpad */ = {
 			isa = PBXGroup;
 			children = (
-				19A0EAA216519312001B196E /* Numberpad.h */,
-				19A0EAA316519312001B196E /* Numberpad.m */,
-				19A0EAA416519312001B196E /* Numberpad.xib */,
+				19701C6016BC896400AC7479 /* LNNumberpad.h */,
+				19701C6116BC896400AC7479 /* LNNumberpad.m */,
+				19701C6216BC896400AC7479 /* LNNumberpad.xib */,
 			);
-			name = Numberpad;
+			name = LNNumberpad;
 			sourceTree = "<group>";
 		};
 		19A0EAAE1651951A001B196E /* en.lproj */ = {
@@ -134,9 +134,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		19A0EA5816511287001B196E /* Numberpad */ = {
+		19A0EA5816511287001B196E /* LNNumberpad */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 19A0EA7716511287001B196E /* Build configuration list for PBXNativeTarget "Numberpad" */;
+			buildConfigurationList = 19A0EA7716511287001B196E /* Build configuration list for PBXNativeTarget "LNNumberpad" */;
 			buildPhases = (
 				19A0EA5516511287001B196E /* Sources */,
 				19A0EA5616511287001B196E /* Frameworks */,
@@ -146,9 +146,9 @@
 			);
 			dependencies = (
 			);
-			name = Numberpad;
+			name = LNNumberpad;
 			productName = Numberpad;
-			productReference = 19A0EA5916511287001B196E /* Numberpad.app */;
+			productReference = 19A0EA5916511287001B196E /* LNNumberpad.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -160,7 +160,7 @@
 				LastUpgradeCheck = 0440;
 				ORGANIZATIONNAME = "Louis Nafziger";
 			};
-			buildConfigurationList = 19A0EA5316511287001B196E /* Build configuration list for PBXProject "Numberpad" */;
+			buildConfigurationList = 19A0EA5316511287001B196E /* Build configuration list for PBXProject "LNNumberpad" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -172,7 +172,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				19A0EA5816511287001B196E /* Numberpad */,
+				19A0EA5816511287001B196E /* LNNumberpad */,
 			);
 		};
 /* End PBXProject section */
@@ -182,9 +182,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19A0EAA616519312001B196E /* Numberpad.xib in Resources */,
 				19A0EAB31651951A001B196E /* InfoPlist.strings in Resources */,
 				19A0EAB41651951A001B196E /* ViewController.xib in Resources */,
+				19701C6416BC896400AC7479 /* LNNumberpad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,10 +195,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19A0EAA516519312001B196E /* Numberpad.m in Sources */,
 				19A0EAB71651961A001B196E /* main.m in Sources */,
 				19A0EAB916519661001B196E /* ViewController.m in Sources */,
 				19A0EABB1651967C001B196E /* AppDelegate.m in Sources */,
+				19701C6316BC896400AC7479 /* LNNumberpad.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,9 +287,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Numberpad-Prefix.pch";
-				INFOPLIST_FILE = "Numberpad-Info.plist";
-				PRODUCT_NAME = Numberpad;
+				GCC_PREFIX_HEADER = "LNNumberpad-Prefix.pch";
+				INFOPLIST_FILE = "LNNumberpad-Info.plist";
+				PRODUCT_NAME = LNNumberpad;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -298,9 +298,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Numberpad-Prefix.pch";
-				INFOPLIST_FILE = "Numberpad-Info.plist";
-				PRODUCT_NAME = Numberpad;
+				GCC_PREFIX_HEADER = "LNNumberpad-Prefix.pch";
+				INFOPLIST_FILE = "LNNumberpad-Info.plist";
+				PRODUCT_NAME = LNNumberpad;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -308,7 +308,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		19A0EA5316511287001B196E /* Build configuration list for PBXProject "Numberpad" */ = {
+		19A0EA5316511287001B196E /* Build configuration list for PBXProject "LNNumberpad" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				19A0EA7516511287001B196E /* Debug */,
@@ -317,7 +317,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		19A0EA7716511287001B196E /* Build configuration list for PBXNativeTarget "Numberpad" */ = {
+		19A0EA7716511287001B196E /* Build configuration list for PBXNativeTarget "LNNumberpad" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				19A0EA7816511287001B196E /* Debug */,

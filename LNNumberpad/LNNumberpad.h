@@ -1,35 +1,36 @@
 /******************************************************************************
  * v. 0.9    12 NOV 2012
- * Filename  Numberpad-Prefix.pch
- * Project:  NumberPad
- * Purpose:  Prefix header for all source files of the 'NumberPad' target in the 'NumberPad' project
+ * Filename  LNNumberpad.h
+ * Project:  LNNumberpad
+ * Purpose:  Class to display a custom LNNumberpad on an iPad and properly handle 
+ *           the text input.
  * Author:   Louis Nafziger
+ *
+ * Copyright 2012 Louis Nafziger
  ******************************************************************************
  *
- * This file is part of NumberPad.
+ * This file is part of LNNumberpad.
  *
  * COPYRIGHT 2013 Louis Nafziger
  *
- * NumberPad is free software: you can redistribute it and/or modify
+ * LNNumberpad is free software: you can redistribute it and/or modify
  * it under the terms of the The MIT License (MIT).
  *
- * NumberPad is distributed in the hope that it will be useful,
+ * LNNumberpad is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * The MIT License for more details.
  *
  * You should have received a copy of the The MIT License (MIT)
- * along with NumberPad.  If not, see <http://opensource.org/licenses/MIT>.
+ * along with LNNumberpad.  If not, see <http://opensource.org/licenses/MIT>.
  *
  *****************************************************************************/
 
-#import <Availability.h>
+#import <UIKit/UIKit.h>
 
-#ifndef __IPHONE_4_0
-#warning "This project uses features only available in iOS SDK 4.0 and later."
-#endif
+@interface LNNumberpad : UIView
 
-#ifdef __OBJC__
-    #import <UIKit/UIKit.h>
-    #import <Foundation/Foundation.h>
-#endif
+// The one and only LNNumberpad instance you should ever need:
++ (LNNumberpad *)defaultLNNumberpad;
+
+@end

@@ -268,6 +268,7 @@
 								<string key="NSFrame">{{331, 182}, {100, 168}}</string>
 								<reference key="NSSuperview" ref="777118458"/>
 								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -710,7 +711,7 @@
 				<string key="100.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="101.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<real value="0.0" key="101.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
-				<string key="2.CustomClassName">Numberpad</string>
+				<string key="2.CustomClassName">LNNumberpad</string>
 				<string key="2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="28.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="29.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -733,50 +734,46 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">118</int>
+			<int key="maxID">119</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<object class="IBPartialClassDescription">
-					<string key="className">Numberpad</string>
+					<string key="className">LNNumberpad</string>
 					<string key="superclassName">UIView</string>
 					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="numberpadClearPressed:">UIButton</string>
-						<string key="numberpadDeletePressed:">UIButton</string>
-						<string key="numberpadDonePressed:">UIButton</string>
-						<string key="numberpadNumberPressed:">UIButton</string>
+						<string key="LNNumberpadClearPressed:">UIButton</string>
+						<string key="LNNumberpadDeletePressed:">UIButton</string>
+						<string key="LNNumberpadDonePressed:">UIButton</string>
+						<string key="LNNumberpadNumberPressed:">UIButton</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="numberpadClearPressed:">
-							<string key="name">numberpadClearPressed:</string>
+						<object class="IBActionInfo" key="LNNumberpadClearPressed:">
+							<string key="name">LNNumberpadClearPressed:</string>
 							<string key="candidateClassName">UIButton</string>
 						</object>
-						<object class="IBActionInfo" key="numberpadDeletePressed:">
-							<string key="name">numberpadDeletePressed:</string>
+						<object class="IBActionInfo" key="LNNumberpadDeletePressed:">
+							<string key="name">LNNumberpadDeletePressed:</string>
 							<string key="candidateClassName">UIButton</string>
 						</object>
-						<object class="IBActionInfo" key="numberpadDonePressed:">
-							<string key="name">numberpadDonePressed:</string>
+						<object class="IBActionInfo" key="LNNumberpadDonePressed:">
+							<string key="name">LNNumberpadDonePressed:</string>
 							<string key="candidateClassName">UIButton</string>
 						</object>
-						<object class="IBActionInfo" key="numberpadNumberPressed:">
-							<string key="name">numberpadNumberPressed:</string>
+						<object class="IBActionInfo" key="LNNumberpadNumberPressed:">
+							<string key="name">LNNumberpadNumberPressed:</string>
 							<string key="candidateClassName">UIButton</string>
 						</object>
 					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/Numberpad.h</string>
+						<string key="minorKey">./Classes/LNNumberpad.h</string>
 					</object>
 				</object>
 			</array>
 		</object>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBIPadFramework</string>
-		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDependencyDefaults">
-			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaTouchPlugin.iPhoneOS</string>
-			<real value="1536" key="NS.object.0"/>
-		</object>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<string key="IBCocoaTouchPluginVersion">1930</string>

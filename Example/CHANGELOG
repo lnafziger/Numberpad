@@ -1,3 +1,7 @@
+v0.9.4 - 01 FEB 2013
+- Changed name to LNNumberpad to avoid namespace conflicts
+- Reformatted code
+
 v0.9.3 - 01 FEB 2013
 - Converted Numberpad from a UIViewController subclass to a UIView subclass
 
