@@ -27,7 +27,12 @@ self.myTextField.inputView  = [LNNumberpad defaultLNNumberpad];
 
 A complete example project is included in the Example directory.
 
-COPYING
+Screen Shot
+===========
+![LNNumberpad Screen Shot](/Images/LNNumberpad Example 1.png)
+
+
+Copying
 =======
 
 COPYRIGHT 2013 Louis Nafziger
