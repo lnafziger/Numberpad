@@ -31,6 +31,10 @@ Screen Shot
 ===========
 ![LNNumberpad Screen Shot](/Images/LNNumberpad Example 1.png)
 
+TODO
+====
+
+* Make the button appearance more similar to the actual iOS keyboard (button size, background gradients, color, shadows, etc).  Contributions would be greatly appreciated as I have other projects that demand a higher priority than the visual aspects of this one.
 
 Copying
 =======
