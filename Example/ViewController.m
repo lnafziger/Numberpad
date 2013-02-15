@@ -38,7 +38,15 @@
 {
     [super viewDidLoad];
 
-    self.myTextField.inputView  = [LNNumberpad defaultLNNumberpad];
+    /*
+     * An example loading a custom xib.  
+     * Normally you should not need to do this, but instead would either modify LNNumberpad.xib or 
+     * change the default xib in the defaultLNNumberpad class method to your own xib.  
+     * This however, is for demonstration purposes.
+     */
+    self.myTextField.inputView  = [[[NSBundle mainBundle] loadNibNamed:@"LNHexNumberpad" owner:self options:nil] objectAtIndex:0];
+    
+    // The "normal" numberpad
     self.myTextView.inputView   = [LNNumberpad defaultLNNumberpad];
 }
 

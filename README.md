@@ -5,6 +5,8 @@ iOS Custom Numberpad
 
 LNNumberpad is a custom numeric keyboard for the iPad which works with both ```UITextField```'s and ```UITextView```'s requiring no changes other than adding an instance of the ```LNNumberpad``` class as the ```inputView``` of the text field/view.
 
+While the example is a numeric keyboard, the class accepts any alpha-numeric character on a key. It may be used as a general-purpose keyboard if the necessary buttons are created, as shown in the LNHexNumberpad example.  
+
 I have used it extensively in several projects that are currently in use, but please let me know if you have any problems or would like to contribute to this project.
 
 Thank you.
@@ -30,6 +32,8 @@ A complete example project is included in the Example directory.
 Screen Shot
 ===========
 ![LNNumberpad Screen Shot](/Images/LNNumberpad Example 1.png)
+
+![LNHexNumberpad Screen Shot](/Images/LNNumberpad Example 2.png)
 
 TODO
 ====
