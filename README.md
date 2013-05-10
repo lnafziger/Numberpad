@@ -1,4 +1,4 @@
-LNNumberpad v0.9.4
+LNNumberpad v0.9.5
 =========
 
 iOS Custom Numberpad
@@ -29,8 +29,8 @@ self.myTextField.inputView  = [LNNumberpad defaultLNNumberpad];
 
 A complete example project is included in the Example directory.
 
-Screen Shot
-===========
+Screen Shots
+============
 ![LNNumberpad Screen Shot](/Images/LNNumberpad Example 1.png)
 
 ![LNHexNumberpad Screen Shot](/Images/LNNumberpad Example 2.png)
@@ -43,7 +43,7 @@ TODO
 Copying
 =======
 
-COPYRIGHT 2013 Louis Nafziger
+COPYRIGHT 2012-2013 Louis Nafziger
 
 LNNumberpad is free software: you can redistribute it and/or modify
 it under the terms of the The MIT License (MIT).

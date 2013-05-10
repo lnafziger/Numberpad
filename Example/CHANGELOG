@@ -1,3 +1,8 @@
+v0.9.5 - 09 MAY 2013
+- Changed 'numberpadDonePressed:' so that target 'textFieldShouldEndEditing' delegate method is no longer being called twice.
+- Changed declared property 'targetTextField' from class 'id' to class 'UIResponder'.
+- Updated copyright years and version numbers.
+
 v0.9.4 - 01 FEB 2013
 - Changed name to LNNumberpad to avoid namespace conflicts
 - Reformatted code

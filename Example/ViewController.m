@@ -1,14 +1,14 @@
 /******************************************************************************
- * v. 0.9    12 NOV 2012
+ * v. 0.9.5  09 MAY 2013
  * Filename  ViewController.m
  * Project:  LNNumberpad
  * Purpose:  Simple UIViewController subclass to demo the LNNumberpad class
  * Author:   Louis Nafziger
  *
- * Copyright 2012 Louis Nafziger
+ * Copyright 2012-2013 Louis Nafziger
  ******************************************************************************
  *
- * COPYRIGHT 2013 Louis Nafziger
+ * COPYRIGHT 2012 - 2013 Louis Nafziger
  *
  * LNNumberpad is free software: you can redistribute it and/or modify
  * it under the terms of the The MIT License (MIT).

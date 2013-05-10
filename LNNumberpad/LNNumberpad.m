@@ -1,17 +1,17 @@
 /******************************************************************************
- * v. 0.9.1  15 NOV 2012
+ * v. 0.9.5  09 MAY 2013
  * Filename  LNNumberpad.m
  * Project:  LNNumberpad
  * Purpose:  Class to display a custom LNNumberpad on an iPad and properly handle
  *           the text input.
  * Author:   Louis Nafziger
  *
- * Copyright 2012 Louis Nafziger
+ * Copyright 2012 - 2013 Louis Nafziger
  ******************************************************************************
  *
  * This file is part of LNNumberpad.
  *
- * COPYRIGHT 2013 Louis Nafziger
+ * COPYRIGHT 2012 - 2013 Louis Nafziger
  *
  * LNNumberpad is free software: you can redistribute it and/or modify
  * it under the terms of the The MIT License (MIT).
@@ -32,7 +32,7 @@
 
 @interface LNNumberpad ()
 
-@property (nonatomic, weak) id<UITextInput> targetTextInput;
+@property (nonatomic, weak) UIResponder <UITextInput> *targetTextInput;
 
 @end
 
@@ -113,12 +113,15 @@
 
 // Editing just began, store a reference to the object that just became the firstResponder
 - (void)editingDidBegin:(NSNotification *)notification {
-    if ([notification.object conformsToProtocol:@protocol(UITextInput)]) {
-        self.targetTextInput = notification.object;
-        return;
+    if ([notification.object isKindOfClass:[UIResponder class]])
+    {
+        if ([notification.object conformsToProtocol:@protocol(UITextInput)]) {
+            self.targetTextInput = notification.object;
+            return;
+        }
     }
     
-    // Object does not conform to UITextInput so we don't care about it
+    // Not a valid target for us to worry about.
     self.targetTextInput = nil;
 }
 
@@ -177,24 +180,9 @@
 
 // The done button was just pressed on the number pad
 - (IBAction)numberpadDonePressed:(UIButton *)sender {
-    if (self.targetTextInput) {
-        // Call the delegate methods and resign the first responder if appropriate
-        if ([self.targetTextInput isKindOfClass:[UITextView class]]) {
-            UITextView *textView = (UITextView *)self.targetTextInput;
-            if ([textView.delegate respondsToSelector:@selector(textViewShouldEndEditing:)]) {
-                if ([textView.delegate textViewShouldEndEditing:textView]) {
-                    [textView resignFirstResponder];
-                }
-            }
-        } else if ([self.targetTextInput isKindOfClass:[UITextField class]]) {
-            UITextField *textField = (UITextField *)self.targetTextInput;
-            if ([textField.delegate respondsToSelector:@selector(textFieldShouldEndEditing:)]) {
-                if ([textField.delegate textFieldShouldEndEditing:textField]) {
-                    [textField resignFirstResponder];
-                }
-            }
+        if (self.targetTextInput) {
+            [self.targetTextInput resignFirstResponder];
         }
-    }
 }
 
 #pragma mark - text replacement routines
