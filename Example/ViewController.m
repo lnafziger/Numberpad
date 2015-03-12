@@ -44,10 +44,16 @@
      * change the default xib in the defaultLNNumberpad class method to your own xib.  
      * This however, is for demonstration purposes.
      */
-    self.myTextField.inputView  = [[[NSBundle mainBundle] loadNibNamed:@"LNHexNumberpad" owner:self options:nil] objectAtIndex:0];
-    
+   // self.myTextField.inputView  = [[[NSBundle mainBundle] loadNibNamed:@"LNHexNumberpad" owner:self options:nil] objectAtIndex:0];
+
     // The "normal" numberpad
     self.myTextView.inputView   = [LNNumberpad defaultLNNumberpad];
+
+    //An hexa number pad
+    self.myTextField.inputView  = [LNNumberpad hexLNNumberpad];
+
+    //A simpler number pad
+    self.myOtherTextField.inputView  = [LNNumberpad simpleLNNumberpad];
 }
 
 - (void)viewDidUnload
