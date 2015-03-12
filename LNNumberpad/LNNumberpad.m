@@ -55,6 +55,31 @@
     return defaultLNNumberpad;
 }
 
+
++ (LNNumberpad *)hexLNNumberpad {
+    static LNNumberpad *hexLNNumberpad = nil;
+    static dispatch_once_t onceToken;
+
+    dispatch_once(&onceToken, ^{
+        hexLNNumberpad = [[[NSBundle mainBundle] loadNibNamed:@"LNHexNumberpad" owner:self options:nil] objectAtIndex:0];
+    });
+
+    return hexLNNumberpad;
+}
+
+
++ (LNNumberpad *)simpleLNNumberpad {
+    static LNNumberpad *simpleLNNumberpad = nil;
+    static dispatch_once_t onceToken;
+
+    dispatch_once(&onceToken, ^{
+        simpleLNNumberpad = [[[NSBundle mainBundle] loadNibNamed:@"LNSimpleNumberpad" owner:self options:nil] objectAtIndex:0];
+    });
+
+    return simpleLNNumberpad;
+}
+
+
 #pragma mark - view lifecycle
 
 - (id)initWithFrame:(CGRect)frame {

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		131A96E61AB1416600FECB55 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 131A96E51AB1416600FECB55 /* Images.xcassets */; };
+		131A96E81AB1419600FECB55 /* LNSimpleNumberpad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 131A96E71AB1419600FECB55 /* LNSimpleNumberpad.xib */; };
 		19701C6316BC896400AC7479 /* LNNumberpad.m in Sources */ = {isa = PBXBuildFile; fileRef = 19701C6116BC896400AC7479 /* LNNumberpad.m */; };
 		19701C6416BC896400AC7479 /* LNNumberpad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19701C6216BC896400AC7479 /* LNNumberpad.xib */; };
 		1989E1CB16CE052D00E095E8 /* LNHexNumberpad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1989E1CA16CE052D00E095E8 /* LNHexNumberpad.xib */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		131A96E51AB1416600FECB55 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		131A96E71AB1419600FECB55 /* LNSimpleNumberpad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LNSimpleNumberpad.xib; sourceTree = "<group>"; };
 		19701C6016BC896400AC7479 /* LNNumberpad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LNNumberpad.h; path = ../LNNumberpad/LNNumberpad.h; sourceTree = "<group>"; };
 		19701C6116BC896400AC7479 /* LNNumberpad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LNNumberpad.m; path = ../LNNumberpad/LNNumberpad.m; sourceTree = "<group>"; };
 		19701C6216BC896400AC7479 /* LNNumberpad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LNNumberpad.xib; path = ../LNNumberpad/LNNumberpad.xib; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 				19701C6116BC896400AC7479 /* LNNumberpad.m */,
 				19701C6216BC896400AC7479 /* LNNumberpad.xib */,
 				1989E1CA16CE052D00E095E8 /* LNHexNumberpad.xib */,
+				131A96E71AB1419600FECB55 /* LNSimpleNumberpad.xib */,
+				131A96E51AB1416600FECB55 /* Images.xcassets */,
 			);
 			name = LNNumberpad;
 			sourceTree = "<group>";
@@ -186,6 +192,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				19A0EAB31651951A001B196E /* InfoPlist.strings in Resources */,
+				131A96E61AB1416600FECB55 /* Images.xcassets in Resources */,
+				131A96E81AB1419600FECB55 /* LNSimpleNumberpad.xib in Resources */,
 				19A0EAB41651951A001B196E /* ViewController.xib in Resources */,
 				19701C6416BC896400AC7479 /* LNNumberpad.xib in Resources */,
 				1989E1CB16CE052D00E095E8 /* LNHexNumberpad.xib in Resources */,

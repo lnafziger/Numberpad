@@ -30,7 +30,9 @@
 
 @interface LNNumberpad : UIView
 
-// The one and only LNNumberpad instance you should ever need:
+// You should ever need only a LNNumberpad instance.
 + (LNNumberpad *)defaultLNNumberpad;
++ (LNNumberpad *)hexLNNumberpad;
++ (LNNumberpad *)simpleLNNumberpad;
 
 @end

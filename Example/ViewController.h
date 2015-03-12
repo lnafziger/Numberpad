@@ -31,5 +31,6 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *myTextField;
 @property (weak, nonatomic) IBOutlet UITextView  *myTextView;
+@property (weak, nonatomic) IBOutlet UITextField *myOtherTextField;
 
 @end
