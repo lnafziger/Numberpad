@@ -31,7 +31,7 @@ A complete example project is included in the Example directory.
 
 Screen Shots
 ============
-![LNNumberpad Screen Shot](/Images/LNNumberpad Example 1.png)
+![New Layout LNNumberpad](/Images/newlayout.png)
 
 ![LNHexNumberpad Screen Shot](/Images/LNNumberpad Example 2.png)
 
