@@ -29,9 +29,17 @@ self.myTextField.inputView  = [LNNumberpad defaultLNNumberpad];
 
 A complete example project is included in the Example directory.
 
-Screen Shots
+Screen Shot The New Layout
 ============
+
 ![New Layout LNNumberpad](/Images/newlayout.png)
+
+
+This modification in the .xib file does not change the functionality of the keyboard and not the class. Only features a new layout.
+
+Screen Shots Layout
+============
+
 
 ![LNHexNumberpad Screen Shot](/Images/LNNumberpad Example 2.png)
 
